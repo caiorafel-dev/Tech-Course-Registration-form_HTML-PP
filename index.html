@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+
+    <header>
+      <h1 id="title">Tech Course Registration Form</h1>
+      <p id="description">A user-friendly form designed to collect contact details from students interested in attending a programming workshop.</p>
+    </header>
+
+    <form id="survey-form">
+      <!-- 1º Fieldset: Personal Info -->
+      <fieldset>
+        <legend>Personal info</legend>
+
+        <div>
+          <label id="name-label" for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        
+        <div>
+          <label id="email-label" for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="example@email.com">
+        </div>
+        
+        <div>
+          <label id="number-label" for="number">Age</label>
+          <input type="number" id="number" name="age" min="5" max="100" required placeholder="23">
+        </div>
+
+        <div>
+          <label for="dropdown">Experience Level</label>
+          <select id="dropdown" name="experience" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="advanced">I build cool stuff already</option>
+            <option value="basic">I know the basics</option>
+            <option value="zero">Honestly? No idea!</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- 2º Fieldset: Radio Buttons (Obrigatórios para o teste) -->
+      <fieldset>
+        <legend>Employment Status</legend>
+
+        <div>
+          <input type="radio" id="student" name="employment" value="student">
+          <label for="student">Student</label>
+        </div>
+
+        <div>
+          <input type="radio" id="employed" name="employment" value="employed">
+          <label for="employed">Employed</label>
+        </div>
+      </fieldset>
+
+      <!-- 3º Fieldset: Checkboxes -->
+      <fieldset>
+        <legend>What do you want to learn?</legend>
+
+        <div>
+          <input type="checkbox" id="html-css" name="topics" value="html-css">
+          <label for="html-css">HTML5 & CSS Fundamentals</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="javascript" name="topics" value="javascript">
+          <label for="javascript">JavaScript</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="cybersecurity" name="topics" value="cybersecurity">
+          <label for="cybersecurity">Cybersecurity & Network</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="back-end" name="topics" value="back-end">
+          <label for="back-end">Back-End</label>
+        </div>
+      </fieldset>
+
+      <!-- 4º Fieldset: Comments -->
+      <fieldset>
+        <legend>Comments</legend>
+
+        <div class="form-group">
+          <label for="comments">Any comments or suggestions?</label>
+          <textarea id="comments" name="comments" rows="4" cols="30" placeholder="Escreve aqui os teus comentários..."></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Botão de Submissão -->
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
